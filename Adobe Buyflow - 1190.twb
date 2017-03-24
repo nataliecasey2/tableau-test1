@@ -1,0 +1,811 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 9300.16.0726.1843                                -->
+<workbook source-build='9.3.5 (9300.16.0726.1843)' source-platform='win' version='9.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style-theme name='modern' />
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='9.3'>
+      <aliases enabled='yes' />
+      <column caption='Launch SLA Order Time' datatype='real' default-format='N' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='5.0'>
+        <calculation class='tableau' formula='5.0' />
+      </column>
+    </datasource>
+    <datasource caption='bfordertime (ebdpmodestobid.bfordertime) (ebdpmodestobid)' inline='true' name='hadoophive.062pjl71lmnsfg16hnqy41tranbu' version='9.3'>
+      <connection authentication='no' authentication-type='0' class='hadoophive' connection-type='Impala' dbname='' odbc-connect-string-extras='' one-time-sql='' port='21050' schema='ebdpmodestobid' server='modestoebi-wc-a003p.sys.comcast.net' sslcert='' sslmode='' username=''>
+        <relation name='bfordertime' table='[ebdpmodestobid].[bfordertime]' type='table' />
+        <connection-customization class='hadoophive' enabled='false' version='9.3'>
+          <vendor name='hadoophive' />
+          <driver name='hadoophive' />
+          <customizations>
+            <customization name='CAP_CONNECT_STORED_PROCEDURE' value='no' />
+            <customization name='CAP_CREATE_TEMP_TABLES' value='no' />
+            <customization name='CAP_DEFERS_CONNECTION_VERIFICATION' value='no' />
+            <customization name='CAP_FAST_METADATA' value='no' />
+            <customization name='CAP_HIVE_FIX_METADATA_NAMES' value='yes' />
+            <customization name='CAP_INDEX_TEMP_TABLES' value='no' />
+            <customization name='CAP_INSERT_TEMP_EXEC_STORED_PROCEDURE' value='no' />
+            <customization name='CAP_ODBC_ALWAYS_THROW_CONNECT_ERRORS' value='no' />
+            <customization name='CAP_ODBC_BIND_FORCE_DATETIME_AS_CHAR' value='no' />
+            <customization name='CAP_ODBC_BIND_FORCE_DATE_AS_CHAR' value='no' />
+            <customization name='CAP_ODBC_BIND_FORCE_MAX_STRING_BUFFERS' value='no' />
+            <customization name='CAP_ODBC_BIND_FORCE_MEDIUM_STRING_BUFFERS' value='no' />
+            <customization name='CAP_ODBC_BIND_FORCE_SIGNED' value='yes' />
+            <customization name='CAP_ODBC_BIND_FORCE_SMALL_STRING_BUFFERS' value='no' />
+            <customization name='CAP_ODBC_BIND_SUPPRESS_INT64' value='no' />
+            <customization name='CAP_ODBC_BIND_SUPPRESS_PREFERRED_TYPES' value='no' />
+            <customization name='CAP_ODBC_BIND_SUPPRESS_WIDE_CHAR' value='no' />
+            <customization name='CAP_ODBC_CURSOR_DYNAMIC' value='no' />
+            <customization name='CAP_ODBC_CURSOR_FORWARD_ONLY' value='yes' />
+            <customization name='CAP_ODBC_CURSOR_KEYSET_DRIVEN' value='no' />
+            <customization name='CAP_ODBC_CURSOR_STATIC' value='no' />
+            <customization name='CAP_ODBC_DRIVER_HIVE_ASSUME_LATEST' value='no' />
+            <customization name='CAP_ODBC_ERROR_IGNORE_FALSE_ALARM' value='no' />
+            <customization name='CAP_ODBC_FETCH_BUFFERS_RESIZABLE' value='yes' />
+            <customization name='CAP_ODBC_FETCH_BUFFERS_SIZE_MASSIVE' value='no' />
+            <customization name='CAP_ODBC_FETCH_CONTINUE_ON_ERROR' value='no' />
+            <customization name='CAP_ODBC_FORCE_SINGLE_ROW_BINDING' value='no' />
+            <customization name='CAP_ODBC_METADATA_STRING_LENGTH_UNKNOWN' value='yes' />
+            <customization name='CAP_ODBC_REBIND_SKIP_UNBIND' value='no' />
+            <customization name='CAP_ODBC_TRIM_VARCHAR_PADDING' value='no' />
+            <customization name='CAP_ODBC_UNBIND_AUTO' value='no' />
+            <customization name='CAP_ODBC_UNBIND_BATCH' value='no' />
+            <customization name='CAP_ODBC_UNBIND_EACH' value='yes' />
+            <customization name='CAP_ODBC_USE_NATIVE_PROTOCOL' value='no' />
+            <customization name='CAP_QUERY_ALWAYS_USE_AQ_CACHE' value='no' />
+            <customization name='CAP_QUERY_BLENDING_ALWAYS_USE_LOCAL_MAPPING_TABLES' value='no' />
+            <customization name='CAP_QUERY_BLENDING_PREFER_LOCAL_MAPPING_TABLES' value='yes' />
+            <customization name='CAP_QUERY_BLENDING_REMOTE_MAPPING_TABLES' value='yes' />
+            <customization name='CAP_QUERY_BOOLEXPR_TO_INTEXPR' value='no' />
+            <customization name='CAP_QUERY_BOOL_IDENTIFIER_TO_LOGICAL' value='yes' />
+            <customization name='CAP_QUERY_EMPTY_DOMAIN_TOP' value='no' />
+            <customization name='CAP_QUERY_FORCE_AGGREGATE_MEASURES' value='no' />
+            <customization name='CAP_QUERY_GROUP_BY_ALIAS' value='no' />
+            <customization name='CAP_QUERY_GROUP_BY_DEGREE' value='yes' />
+            <customization name='CAP_QUERY_HAVING_REQUIRES_GROUP_BY' value='no' />
+            <customization name='CAP_QUERY_HAVING_UNSUPPORTED' value='no' />
+            <customization name='CAP_QUERY_JOIN_ACROSS_SCHEMAS' value='yes' />
+            <customization name='CAP_QUERY_JOIN_ASSUME_CONSTRAINED' value='no' />
+            <customization name='CAP_QUERY_JOIN_PUSH_DOWN_CONDITION_EXPRESSIONS' value='no' />
+            <customization name='CAP_QUERY_JOIN_REQUIRES_SCOPE' value='no' />
+            <customization name='CAP_QUERY_JOIN_REQUIRES_SUBQUERY' value='no' />
+            <customization name='CAP_QUERY_NULL_REQUIRES_CAST' value='no' />
+            <customization name='CAP_QUERY_RECOMPILE_FAILED_QUERY' value='no' />
+            <customization name='CAP_QUERY_SELECT_ALIASES_SORTED' value='no' />
+            <customization name='CAP_QUERY_SORT_BY' value='yes' />
+            <customization name='CAP_QUERY_SORT_BY_DEGREE' value='no' />
+            <customization name='CAP_QUERY_SUBQUERIES' value='yes' />
+            <customization name='CAP_QUERY_SUBQUERIES_WITH_TOP' value='yes' />
+            <customization name='CAP_QUERY_SUBQUERY_DATASOURCE_CONTEXT' value='yes' />
+            <customization name='CAP_QUERY_SUBQUERY_QUERY_CONTEXT' value='yes' />
+            <customization name='CAP_QUERY_SUPPORTS_LODJOINS' value='yes' />
+            <customization name='CAP_QUERY_SUPPRESS_CHECK_DOMAIN_LITERALS_THRESHOLD' value='no' />
+            <customization name='CAP_QUERY_SUPPRESS_NULL_CHECK_QUERIES' value='no' />
+            <customization name='CAP_QUERY_TOPSTYLE_LIMIT' value='no' />
+            <customization name='CAP_QUERY_TOPSTYLE_ROWNUM' value='no' />
+            <customization name='CAP_QUERY_TOPSTYLE_TOP' value='no' />
+            <customization name='CAP_QUERY_TOP_0_METADATA' value='yes' />
+            <customization name='CAP_QUERY_TOP_N' value='yes' />
+            <customization name='CAP_QUERY_USE_DOMAIN_RANGES_OPTIMIZATION' value='no' />
+            <customization name='CAP_QUERY_USE_QUERY_FUSION' value='yes' />
+            <customization name='CAP_QUERY_WHERE_FALSE_METADATA' value='no' />
+            <customization name='CAP_SELECT_INTO' value='no' />
+            <customization name='CAP_SELECT_TOP_INTO' value='no' />
+            <customization name='CAP_STORED_PROCEDURE_PREFER_TEMP_TABLE' value='no' />
+            <customization name='CAP_STORED_PROCEDURE_REPAIR_TEMP_TABLE_STRINGS' value='no' />
+            <customization name='CAP_STORED_PROCEDURE_TEMP_TABLE_FROM_BUFFER' value='no' />
+            <customization name='CAP_STORED_PROCEDURE_TEMP_TABLE_FROM_NEW_PROTOCOL' value='no' />
+            <customization name='CAP_SUPPRESS_CONNECTION_POOLING' value='yes' />
+            <customization name='CAP_SUPPRESS_DISCOVERY_QUERIES' value='no' />
+            <customization name='CAP_SUPPRESS_GET_SERVER_TIME' value='yes' />
+            <customization name='CAP_SUPPRESS_QUICK_FILTER_ACCELERATION_VIEWS' value='no' />
+          </customizations>
+        </connection-customization>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>visitdate</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[visitdate]</local-name>
+            <parent-name>[bfordertime]</parent-name>
+            <remote-alias>visitdate</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>buyflow_page</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[buyflow_page]</local-name>
+            <parent-name>[bfordertime]</parent-name>
+            <remote-alias>buyflow_page</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_spent_per_visit</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[time_spent_per_visit]</local-name>
+            <parent-name>[bfordertime]</parent-name>
+            <remote-alias>time_spent_per_visit</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_LONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Order Time (Minutes)' datatype='real' datatype-customized='true' name='[Calculation_1371346128524218368]' role='measure' type='quantitative' visual-totals='Avg'>
+        <calculation class='tableau' formula='[time_spent_per_visit] / 60' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Buyflow Page' datatype='string' name='[buyflow_page]' role='dimension' type='nominal' />
+      <column caption='Time Spent Per Visit' datatype='integer' name='[time_spent_per_visit]' role='measure' type='quantitative' />
+      <column caption='Visitdate' datatype='date' datatype-customized='true' default-format='*mmm yy' name='[visitdate]' role='dimension' type='ordinal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.483444' measure-ordering='alphabetic' measure-percentage='0.384106' parameter-percentage='0.13245' show-structure='true' user-set-layout='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Order Time-D'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='bfordertime (ebdpmodestobid.bfordertime) (ebdpmodestobid)' name='hadoophive.062pjl71lmnsfg16hnqy41tranbu' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Launch SLA Order Time' datatype='real' default-format='N' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='5.0'>
+              <calculation class='tableau' formula='5.0' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='hadoophive.062pjl71lmnsfg16hnqy41tranbu'>
+            <column caption='Order Time (Minutes)' datatype='real' datatype-customized='true' name='[Calculation_1371346128524218368]' role='measure' type='quantitative' visual-totals='Avg'>
+              <calculation class='tableau' formula='[time_spent_per_visit] / 60' />
+            </column>
+            <column-instance column='[Calculation_1371346128524218368]' derivation='Avg' name='[avg:Calculation_1371346128524218368:vtavg:qk]' pivot='key' type='quantitative' visual-totals='Avg' />
+            <column caption='Time Spent Per Visit' datatype='integer' name='[time_spent_per_visit]' role='measure' type='quantitative' />
+            <column-instance column='[visitdate]' derivation='Month-Trunc' name='[tmn:visitdate:ok]' pivot='key' type='ordinal' />
+            <column caption='Visitdate' datatype='date' datatype-customized='true' default-format='*mmm yy' name='[visitdate]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[avg:Calculation_1371346128524218368:vtavg:qk]' scope='rows' value='' />
+            <format attr='subtitle' class='0' field='[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[avg:Calculation_1371346128524218368:vtavg:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[avg:Calculation_1371346128524218368:vtavg:qk]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[tmn:visitdate:ok]' value='143' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='line-pattern' id='refline0' value='dashed' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <reference-line axis-column='[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[avg:Calculation_1371346128524218368:vtavg:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-table' value-column='[Parameters].[Parameter 1]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#0272b6' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[avg:Calculation_1371346128524218368:vtavg:qk]</rows>
+        <cols>[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[tmn:visitdate:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Order Time-M'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='bfordertime (ebdpmodestobid.bfordertime) (ebdpmodestobid)' name='hadoophive.062pjl71lmnsfg16hnqy41tranbu' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Launch SLA Order Time' datatype='real' default-format='N' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='5.0'>
+              <calculation class='tableau' formula='5.0' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='hadoophive.062pjl71lmnsfg16hnqy41tranbu'>
+            <column caption='Order Time (Minutes)' datatype='real' datatype-customized='true' name='[Calculation_1371346128524218368]' role='measure' type='quantitative' visual-totals='Avg'>
+              <calculation class='tableau' formula='[time_spent_per_visit] / 60' />
+            </column>
+            <column-instance column='[Calculation_1371346128524218368]' derivation='Avg' name='[avg:Calculation_1371346128524218368:vtavg:qk]' pivot='key' type='quantitative' visual-totals='Avg' />
+            <column caption='Time Spent Per Visit' datatype='integer' name='[time_spent_per_visit]' role='measure' type='quantitative' />
+            <column-instance column='[visitdate]' derivation='Month-Trunc' name='[tmn:visitdate:ok]' pivot='key' type='ordinal' />
+            <column caption='Visitdate' datatype='date' datatype-customized='true' default-format='*mmm yy' name='[visitdate]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[avg:Calculation_1371346128524218368:vtavg:qk]' scope='rows' value='' />
+            <format attr='subtitle' class='0' field='[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[avg:Calculation_1371346128524218368:vtavg:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[avg:Calculation_1371346128524218368:vtavg:qk]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[tmn:visitdate:ok]' value='143' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='line-pattern' id='refline0' value='dashed' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <reference-line axis-column='[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[avg:Calculation_1371346128524218368:vtavg:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-table' value-column='[Parameters].[Parameter 1]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#0272b6' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[avg:Calculation_1371346128524218368:vtavg:qk]</rows>
+        <cols>[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[tmn:visitdate:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Order Time-W'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='bfordertime (ebdpmodestobid.bfordertime) (ebdpmodestobid)' name='hadoophive.062pjl71lmnsfg16hnqy41tranbu' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Launch SLA Order Time' datatype='real' default-format='N' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='5.0'>
+              <calculation class='tableau' formula='5.0' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='hadoophive.062pjl71lmnsfg16hnqy41tranbu'>
+            <column caption='Order Time (Minutes)' datatype='real' datatype-customized='true' name='[Calculation_1371346128524218368]' role='measure' type='quantitative' visual-totals='Avg'>
+              <calculation class='tableau' formula='[time_spent_per_visit] / 60' />
+            </column>
+            <column-instance column='[Calculation_1371346128524218368]' derivation='Avg' name='[avg:Calculation_1371346128524218368:vtavg:qk]' pivot='key' type='quantitative' visual-totals='Avg' />
+            <column caption='Time Spent Per Visit' datatype='integer' name='[time_spent_per_visit]' role='measure' type='quantitative' />
+            <column-instance column='[visitdate]' derivation='Month-Trunc' name='[tmn:visitdate:ok]' pivot='key' type='ordinal' />
+            <column caption='Visitdate' datatype='date' datatype-customized='true' default-format='*mmm yy' name='[visitdate]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[avg:Calculation_1371346128524218368:vtavg:qk]' scope='rows' value='' />
+            <format attr='subtitle' class='0' field='[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[avg:Calculation_1371346128524218368:vtavg:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[avg:Calculation_1371346128524218368:vtavg:qk]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[tmn:visitdate:ok]' value='143' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='line-pattern' id='refline0' value='dashed' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <reference-line axis-column='[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[avg:Calculation_1371346128524218368:vtavg:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-table' value-column='[Parameters].[Parameter 1]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#0272b6' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[avg:Calculation_1371346128524218368:vtavg:qk]</rows>
+        <cols>[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[tmn:visitdate:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='bfordertime (ebdpmodestobid.bfordertime) (ebdpmodestobid)' name='hadoophive.062pjl71lmnsfg16hnqy41tranbu' />
+          </datasources>
+          <datasource-dependencies datasource='hadoophive.062pjl71lmnsfg16hnqy41tranbu'>
+            <column caption='Order Time (Minutes)' datatype='real' datatype-customized='true' name='[Calculation_1371346128524218368]' role='measure' type='quantitative' visual-totals='Avg'>
+              <calculation class='tableau' formula='[time_spent_per_visit] / 60' />
+            </column>
+            <column-instance column='[Calculation_1371346128524218368]' derivation='Avg' name='[avg:Calculation_1371346128524218368:vtavg:qk]' pivot='key' type='quantitative' visual-totals='Avg' />
+            <column-instance column='[time_spent_per_visit]' derivation='Sum' name='[sum:time_spent_per_visit:qk]' pivot='key' type='quantitative' />
+            <column caption='Time Spent Per Visit' datatype='integer' name='[time_spent_per_visit]' role='measure' type='quantitative' />
+            <column-instance column='[visitdate]' derivation='Month-Trunc' name='[tmn:visitdate:ok]' pivot='key' type='ordinal' />
+            <column caption='Visitdate' datatype='date' datatype-customized='true' default-format='*mmm yy' name='[visitdate]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[avg:Calculation_1371346128524218368:vtavg:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[sum:time_spent_per_visit:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[:Measure Names]</rows>
+        <cols>[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[tmn:visitdate:ok]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='28'>
+    <window class='worksheet' name='Order Time-M'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='type_in' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[none:visitdate:nk]</field>
+            <field>[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[yr:visitdate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Order Time-W'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='type_in' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[none:visitdate:nk]</field>
+            <field>[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[yr:visitdate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Order Time-D'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='type_in' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[none:visitdate:nk]</field>
+            <field>[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[yr:visitdate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[:Measure Names]</field>
+            <field>[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[none:buyflow_page:nk]</field>
+            <field>[hadoophive.062pjl71lmnsfg16hnqy41tranbu].[yr:visitdate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Order Time-M' width='177'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Order Time-W' width='177'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Order Time-D' width='177'>
+      iVBORw0KGgoAAAANSUhEUgAAALEAAADACAYAAABLV4KhAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAMGklEQVR4nO3df1DUdR7H8df3ht0EtPXnqHHJGmrK+uuS7Y5VMy+tMb0AFbyk0sofSVxh
+      kybhnesp5uHcwWXAyFjaJFhitducoOJN5yTkiamAS5zoSZaRl0SAisMy87k/FpCQX7ar+JbX
+      Y4Y/9vv97Pf7+X73yZfvLn+sppRSIBLsF109ASJ3MWISjxGTeIyYxGPEJB4jJvEYMYnn1dUT
+      aIvdbu/qKZAQt23EABASEtLVUyABeDtB4jFiEo8Rk3iMmMRjxCQeIybxGDGJx4hJPEZM4jFi
+      Eo8Rk3iMmMRjxCQeIybxGDGJx4hJPEZM4jFiEo8Rk3iMmMRjxCQeIybxGDGJx4hJPEZM4jFi
+      Eo8Rk3jyInZYYTJZ4bjV+82MgNbhfp0ot0dhQn8faJoGzac/JizIwBln4yY0RGS2/eyyTQ+i
+      97NZcLa7izPIWDABmqaHIWAyVtjL2x/fwGE1wWT9OWfNAatJcx1Pix+T1QGH1QStvYO6BeRF
+      fDurSseiJwsRfqgCSimoimOIqo7CM8nnO/HkfKSkGzGzMhnvXmxrzEVkRk7Gn+pfhlKX8bVt
+      PooXjcVCW5UHD6IlE6wO5Tqek2sQGLgGJ5XrceMvhtoVfhP337E7KGInCpJmwN9Hc12lxkYh
+      6yJcV24tAo3XimtXpExEaL/Fs1Gj4KNp0BssiC9wXdMuZkVhlI8GzcfctAwAUF+ADRYD9Joe
+      Bks8ClpeAi+cx/m+o2H293Y99h6C5z/+Ebkxfh3PPisFu8yLkBIKJCTktz4oPwEr85/CzvRn
+      AOhw95hlsO2eh4NxiXDAAavpfoRFjIdeC8Sak9fOh95gwYaC+qbzVG6PwliDHprmA/8ZSQ3H
+      4TofEREDoPmEY9flzpxzXLsSO6wwmaJhXeAPH02Pe6Yl42DmAtfr0ew81h7dhBn+Pj99jdx0
+      50RcloTF1h5Yd6YOSlXhI8sneH3LqQ6edAjH+76HCnUFeS9UYW3CHgAOvLUiG49kX8H3b/ZF
+      /OvpaLrOnT2LoW9+h7oreXihai0S9rTY3IhopCwoxOx+BgRMno1l1vdw6FxtJyZfhfTkXEQs
+      eRSGyBcxcVcKslq5R6gqKEDltGkwN1ummzIFluJiFAMATuGEXwou1xVgdW0cQuN74Y0zdaj7
+      7k388lTDuShLxtwVV7G+5DKUqsC+KbsRHtf4S3MIVY9+CVWVgTDfTky7peIPUPzYYVTV/Qvz
+      zkRjbuZjOFxVhxOvXHGdW+d+vPSEHVP2VUCpyyhZfxUxC7bD3b8jd07ExhjY9z2KopXzMHnk
+      fZj9znk4nR3dLQ5H6JNB8IY3goJMDeOLUVxsxpQp3ui/aB+u7FkIQ9PwUDwZ5A14ByHI5MT1
+      mzfAEp+Hqor/IuuNpxFwOR2LRw5BRGYHl5uyNKR8vxhRZgC66Qif+g8kp1//0l66dAk9e/Zs
+      d1NmiwU6nQ7/y82F86kYzB+sA7yD8NJii2tAfh7ySrch5B7XlXhUbC5K9+/HqYbzERzcH9Dp
+      oOvgzLVuKsLnD4ZOZ4HFDEwNn4/BOh3GjWs4t6fykFeei9hRrivxPSHbUJqTg09/1r6uuXMi
+      zo+DZdYH0CY+jTfsx7F3ZaBree/e6H2r5+LdD/dPCsOrm/aicOskZGa2/zLlp6QgP38lhmqu
+      W6GZ2y8iKyUNZS3G+U2cCJ3NhuY3G868POQHBiLwRuYXmo66hvtapRTUiTiMuJHnu2NEHE40
+      33ddOkLd3OSdE3FZGcrGzMby58MwwfsE0j8uRn19PeDnBz84UFDgBGqPYqettIMNBSIwMB8H
+      D9bCmbccQ2/gk5Cq7TPhM3459jbeQjir8XV5FYxGY9tPcmYhZZcZu35s9sKqs0hAClJa3hqb
+      VyLBvAMhoakAnKguSkVoyA6YrdEwtRjqN306DDuSkFHuOu7U7Q0bM5th3pOAtUdrAWc1Pn/N
+      hAFR7l4LO2nEg3jwwhbEZ5TDiVqcezsMAx5ORmfe9rZHZsTFazG6+cc9JiscoXFYf/WP8Nfr
+      MWjWJ3h4aSjOOhxwIhRx6w3YbNZDH7AK/WfN7GDjJixPfAL/nOED/bS9eCJx+XWBtMWw8F1k
+      h5Yg5oF+rnn53ovQwkU4EH/tLjYz4qcfU4XFJOP4wjUINzTfkhFLVpixK6Xlx239EZ7+BVKH
+      Z0DTfHFvaAYCtxYiPbx/K4cRh4y4GsQG6KEf9BLODh3asOkY7Nw+Dp88YoCmH4TfFy5E9l+n
+      dvII3aR7HJvsL6ImNgB6zYAxfx+MrTuXoOO3vR1QHnB280MKQNPPkqzrx/yQ9bIy9YYCfNTA
+      8bPUxs+q292mzWbzxNSoG/DAlbgehceO4sX91/4cbpnRckwRUl87gshPa+BUFTgQWY2N7x92
+      f9dE8MjtRBGO5z2MB8a2M6SmGIV3zUbY+J7wQg+MnhuOscccOO3+zok8EPGF4zjyn3PYMncQ
+      fDVfDHp8A45UthxTjnM6r2vfN2YMwMjPv0RHb7GIOsP977Eb+Bz2qOeaHl498AeY1x3E8b9N
+      cXvjH374YZvr5syZ0+mx3W387TSXWzHe41/G2MMYgF5fFOEbTIGxceHAwRjyQwlqGh+XnUFJ
+      8CgMb3jIbw8lt7j91rAwXo2Z/pYqcyqllFPVfPSsmhBf2GJQqUoMDlYbimqVUrXq223zVO8l
+      WcrZzmb56QR1lvv3xGNeQcbcXMwcoEHTBuA3mZOwY+UYAED2Ug1LswFgGMKXGZE62Rua5o1h
+      q6qxbvn02/s7eUkMTSmlunoSrbHb7fxuZ+oUmf+xI2qGEZN4jJjEY8QkHiMm8RgxiceISTxG
+      TOIxYhKPEZN4jJjEY8QkHiMm8RgxiceISTxGTOIxYhKPEZN4jJjEY8QkHiMm8RgxiceISTxG
+      TOIxYhKPEZN4jJjEY8QkHiMm8RgxiceISTxGTOIxYhKPEZN4jJjEY8QkHiMm8RgxiceISTxG
+      TOIxYhKPEZN4jJjEY8QkHiMm8RgxiceISTxGTOJ5NOKanGgYLUk43drKnGj4ahq0hh9LUquj
+      iG6Y5yKuyUHs4mR81cbqkoJ/I2jzWSiloJRCXswwj+2aujcPRVyDnNjVcMasRnAb6wuOfoNf
+      jzd6ZndEzXgk4srsV7HaacXGWf3aGFGALw4CB2JHo4+moc/oJfjgXL0ndk3kgYgrs7HKClg3
+      zkCfNgdNQkJ5OY59dhKVSuH7PePw9qJ3cN7tnRMBXm5v4bANaUfSkNY3rWnRcAtQmheDtu56
+      vfzvw9DcPSgG4AfAbre7PQ3qxpQnlSaq4OBEVdpyefVuFekfrXJqXQ9rizaohyJ3q+p2NmWz
+      2Tw6Nbpz3cTPiU8jyWJB0mkAvUKQuPVurDX6QtN8YVx2CX/ePAe9bt7OqRvRlFKqqyfRGrvd
+      jpCQkK6eBgnA/9iReIyYxGPEJB4jJvEYMYnHiEk8RkziMWISjxGTeIyYxGPEJB4jJvEYMYnH
+      iEk8RkziMWISjxGTeIyYxGPEJB4jJvEYMYnHiEk8RkziMWISjxGTeIyYxGPEJB4jJvEYMYnH
+      iEk8RkziMWISjxGTeIyYxGPEJB4jJvEYMYnHiEk8RkziMWISjxGTeIyYxGPEJB4jJvEYMYnH
+      iEk8RkziMWISz6MR1+REw2hJwulW1lVmx2B0Hw2a5otBv/od/nKoxpO7pm7McxHX5CB2cTK+
+      anVlEVJfO4LIT2vgVBU4EFmNje8f9tiuqXvzUMQ1yIldDWfMagS3uroYhXfNRtj4nvBCD4ye
+      G46xxxytXrGJbpRHIq7MfhWrnVZsnNWv9QEXynFO5wWvxsfGAIz8/EuUemLn1O25H3FlNlZZ
+      AevGGejj/nyIbphXx0M6cNiGtCNpSOub1rRouAUozYvBsMYFAwdjyA8laHorV3YGJcGjMLzh
+      od1ud3sa1I0pTypNVMHBiar0+hUqMThYbSiqVUrVqm+3zVO9l2QpZzubstlsHp0a3blu6ufE
+      2Us1LM0GgGEIX2ZE6mRvaJo3hq2qxrrl0z3wZ4AI0JRSqqsn0Rq73Y6QkJCungYJwP/YkXiM
+      mMRjxCQeIybxGDGJx4hJPEZM4jFiEo8Rk3iMmMRjxCQeIybxGDGJx4hJPEZM4jFiEo8Rk3iM
+      mMRjxCQeIybxGDGJx4hJPEZM4jFiEu//bawz2uX3VGQAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='64' name='Sheet 2' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
